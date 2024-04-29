@@ -8,6 +8,7 @@ tags:
 - Shortcuts
 ---
 
+
 # Creating a new pane
 
 ## Horizontal pane
