@@ -74,10 +74,10 @@ services:
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=***
     restart: always
     networks:
-      - influxdb2
+      - smarthome
 
 networks:
   influxdb2:
-    name: "influxdb2"
+    name: "smarthome"
     driver: "bridge"
 ~~~

@@ -240,11 +240,11 @@ services:
     user: 1014:995
     restart: always
     networks:
-        - influxdb2
+        - smarthome
     ports:
       - "3001:3001"
 networks:
     influxdb2:
         external: true
-        name: "influxdb2"
+        name: "smarthome"
 ~~~

@@ -59,10 +59,10 @@ loki:
      - "3100:3100"
     restart: always
     networks:
-      - influxdb2
+      - smarthome
 
 networks:
   influxdb2:
     external: true
-    name: "influxdb2"
+    name: "smarthome"
 ~~~

@@ -49,12 +49,12 @@ services:
          - ./etc_promtail/promtail.yaml:/etc/promtail/promtail.yaml
       restart: always
       networks:
-         - influxdb2
+         - smarthome
 
 networks:
   influxdb2:
     external: true
-    name: "influxdb2"
+    name: "smarthome"
 ~~~
 
 # Gather journald logs and Docker container logs

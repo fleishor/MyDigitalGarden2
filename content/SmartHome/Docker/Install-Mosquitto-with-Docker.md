@@ -58,12 +58,12 @@ services:
       - "9001:9001"
     restart: always
     networks:
-        - influxdb2
+        - smarthome
 
 networks:
     influxdb2:
         external: true
-        name: "influxdb2"
+        name: "smarthome"
 ~~~
 
 # mosquitto.conf
