@@ -1,0 +1,30 @@
+.cookies-banner {
+    background-color: var(--darkgray);
+    color: var(--light);
+    padding: 6px;
+    font-size: 1em;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.cookies-banner button {
+    text-decoration: none;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 4px 7px;
+    margin: 2px 0;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.07s, color 0.07s, border-color 0.07s;
+}
+
+.cookies-banner button:hover {
+    background: #fff;
+    color: #222;
+}
+
+.hidden {
+    display: none;
+  }
+  

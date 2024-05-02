@@ -62,7 +62,7 @@ button#explorer {
       transform 0.35s ease,
       opacity 0.2s ease;
     & li > a {
-      color: var(--dark);
+      color: var(--anchor);
       opacity: 0.75;
       pointer-events: all;
     }
@@ -87,7 +87,7 @@ svg {
     color: var(--secondary);
     font-family: var(--headerFont);
     font-size: 0.95rem;
-    font-weight: $semiBoldWeight;
+    font-weight: $normalWeight;
     line-height: 1.5rem;
     display: inline-block;
   }
@@ -112,7 +112,7 @@ svg {
       font-size: 0.95rem;
       display: inline-block;
       color: var(--secondary);
-      font-weight: $semiBoldWeight;
+      font-weight: $normalWeight;
       margin: 0;
       line-height: 1.5rem;
       pointer-events: none;

@@ -41,7 +41,7 @@ button#toc {
     margin: 0.5rem 0;
     padding: 0;
     & > li > a {
-      color: var(--dark);
+      color: var(--anchor);
       opacity: 0.35;
       transition:
         0.5s ease opacity,

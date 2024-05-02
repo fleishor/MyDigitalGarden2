@@ -7,8 +7,8 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   footer: Component.Footer({
     links: {
-      "Impressum": "/WebSite/impressum.html",
-      "Datenschutzerklärung": "/WebSite/datenschutzerklaerung.html",
+      Impressum: "/WebSite/impressum.html",
+      Datenschutzerklärung: "/WebSite/datenschutzerklaerung.html",
     },
   }),
 }
@@ -16,6 +16,7 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
+    Component.CookieConsentPopup(),
     Component.Breadcrumbs(),
     Component.ArticleTitle(),
     Component.ContentMeta(),
@@ -25,11 +26,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-//    Component.Darkmode(),
+    //    Component.Darkmode(),
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    Component.Graph(),
+    Component.DesktopOnly(Component.Graph()),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -42,7 +43,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-//    Component.Darkmode(),
+    //    Component.Darkmode(),
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [],

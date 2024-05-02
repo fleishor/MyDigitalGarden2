@@ -9,6 +9,6 @@ tags:
 
 # Important commands in Quartz4
 
-- npx quartz sync --no-pull : Sync Obsidian with Github
-- npx quartz update: Update Quartz
-- npx quartz build --serve: Build Static Website from Obsidian and start Web server
+- `npx quartz sync --no-pull`: Sync Obsidian with Github
+- `npx quartz update`: Update Quartz
+- `npx quartz build --serve`: Build Static Website from Obsidian and start Web server

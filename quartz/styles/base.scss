@@ -58,10 +58,10 @@ strong {
 }
 
 a {
-  font-weight: $semiBoldWeight;
+  font-weight: $normalWeight;
   text-decoration: none;
   transition: color 0.2s ease;
-  color: var(--secondary);
+  color: var(--anchor);
 
   &:hover {
     color: var(--tertiary) !important;
@@ -80,6 +80,7 @@ a {
       padding: 0;
     }
     &.tag-link {
+      color: var(--anchor);
       &::before {
         content: "#";
       }
