@@ -449,19 +449,21 @@ export async function handleUpdate(argv) {
 
   try {
     gitPull(UPSTREAM_NAME, QUARTZ_SOURCE_BRANCH)
-  } catch {
+  } catch (err) {
     console.log(chalk.red("An error occurred above while pulling updates."))
+    console.log(chalk.red(err.message))
     await popContentFolder(contentFolder)
     return
   }
 
   await popContentFolder(contentFolder)
   console.log("Ensuring dependencies are up to date")
-  const res = spawnSync("npm", ["i"], { stdio: "inherit" })
+  const res = spawnSync("npm", ["i"], { stdio: "inherit", PATH: process.env.PATH })
   if (res.status === 0) {
     console.log(chalk.green("Done!"))
   } else {
     console.log(chalk.red("An error occurred above while installing dependencies."))
+    console.log(res)
   }
 }
 
