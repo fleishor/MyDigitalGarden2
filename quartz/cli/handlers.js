@@ -458,7 +458,7 @@ export async function handleUpdate(argv) {
 
   await popContentFolder(contentFolder)
   console.log("Ensuring dependencies are up to date")
-  const res = spawnSync("npm", ["i"], { stdio: "inherit", PATH: process.env.PATH })
+  const res = spawnSync("npm", ["i"], { stdio: "inherit", shell: true })
   if (res.status === 0) {
     console.log(chalk.green("Done!"))
   } else {
