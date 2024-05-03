@@ -1,7 +1,7 @@
 {
-   "default": true,
-   "MD033": false,
-   "line-length": false,
-   "MD040": false,
-   "MD024": false
+  "default": true,
+  "MD033": false,
+  "line-length": false,
+  "MD040": false,
+  "MD024": false
 }
