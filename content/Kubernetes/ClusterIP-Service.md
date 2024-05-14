@@ -9,8 +9,10 @@ tags:
 - ClusterIP
 ---
 
-# Skripte
-## Service file
+## Skripte
+
+### Service file
+
 ~~~yaml
 apiVersion: v1
 kind: Service
@@ -29,9 +31,10 @@ spec:
     protocol: TCP
 ~~~
 
-## Check ClusterIP service
+### Check ClusterIP service
+
 - Der ClusterIP Service hat wieder einen eigenen IP-Bereich (10.110.0.0/16)
- 
+
 ~~~
 fleishor@desktop:~/vagrant-kubernetes-cluster$ kubectl get services
 NAME                      TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)    AGE
@@ -39,13 +42,14 @@ kubernetes                ClusterIP   10.96.0.1     <none>        443/TCP    17d
 nginx-service-clusterip   ClusterIP   10.110.1.81   <none>        8080/TCP   23h
 ~~~
 
-## DNS (ClusterIP Service Name) innerhalb der Pods verwenden
+### DNS (ClusterIP Service Name) innerhalb der Pods verwenden
+
 - Der ClusterIP Service (Adresse) ist nur innerhalb des Pod Netzwerkes verfügbar
 - Der ClusterIP Service Name kann gleichzeitig als DomainName verwendet werden (FQDN: nginx-server-clusterip.default.svc.cluster.local)
 - HTTP Anfragen an den ClusterIP Service leitet dieser an die Pods weiter (Round-Robin-Verfahren oder sowas ähnliches)
 - Hauptaufgabe der ClusterIP ist das LoadBalancing auf die Pods
 - Innerhalb eines Pods kann auch direkt auf einen anderen Pod zugegriffen werden.
- 
+
 ~~~
 fleishor@desktop:~/vagrant-kubernetes-cluster$ kubectl exec -it nginx-deployment-c4b4cb578-4jqtr -c netshoot-container -- /bin/bash
 bash-5.2# curl nginx-service-clusterip:8080

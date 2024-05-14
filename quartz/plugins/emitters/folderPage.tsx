@@ -25,7 +25,7 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpt
   const opts: FullPageLayout = {
     ...sharedPageComponents,
     ...defaultListPageLayout,
-    pageBody: FolderContent(),
+    pageBody: FolderContent({ showFolderCount: false }),
     ...userOpts,
   }
 

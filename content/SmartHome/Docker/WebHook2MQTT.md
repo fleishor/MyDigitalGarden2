@@ -12,9 +12,9 @@ tags:
 ---
 
 # References
-<https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-winston-and-morgan-to-log-node-js-applications/>
-<http://www.steves-internet-guide.com/using-node-mqtt-client/>
-<https://nodejs.org/en/docs/guides/nodejs-docker-webapp/>
+- <https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-winston-and-morgan-to-log-node-js-applications/>
+- <http://www.steves-internet-guide.com/using-node-mqtt-client/>
+- <https://nodejs.org/en/docs/guides/nodejs-docker-webapp/>
 
 # File tsconfig.json
 ~~~json

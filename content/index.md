@@ -1,3 +1,3 @@
 ---
-title: MyDigitalGarden
+title: Top Topics
 ---

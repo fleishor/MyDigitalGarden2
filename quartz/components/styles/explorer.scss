@@ -1,5 +1,10 @@
 @use "../../styles/variables.scss" as *;
 
+.explorer {
+  background-color: var(--highlight);
+  border-radius: 8px;
+}
+
 button#explorer {
   all: unset;
   background-color: transparent;
@@ -8,7 +13,7 @@ button#explorer {
   cursor: pointer;
   padding: 0;
   color: var(--dark);
-  display: flex;
+  display: none;
   align-items: center;
 
   & h1 {
@@ -42,25 +47,35 @@ button#explorer {
   overflow: hidden;
 }
 
+#explorer-ul {
+  max-height: 700px;
+}
+
 #explorer-content {
   list-style: none;
   overflow: hidden;
   max-height: none;
   transition: max-height 0.35s ease;
-  margin-top: 0.5rem;
+  //  margin-top: 0.5rem;
 
   &.collapsed > .overflow::after {
     opacity: 0;
   }
 
-  & ul {
+  & .folder-container-listitem {
     list-style: none;
+  }
+
+  & ul {
     margin: 0.08rem 0;
     padding: 0;
     transition:
       max-height 0.35s ease,
       transform 0.35s ease,
       opacity 0.2s ease;
+    & li {
+      list-style: circle;
+    }
     & li > a {
       color: var(--anchor);
       opacity: 0.75;
