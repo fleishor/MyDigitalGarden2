@@ -8,7 +8,6 @@ tags:
   - ExpressJS
   - MQTT
   - Typescript
-  - Dockerfile
 ---
 
 

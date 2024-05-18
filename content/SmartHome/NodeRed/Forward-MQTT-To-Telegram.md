@@ -4,10 +4,10 @@ title: Forward MQTT message to telegram
 image: MqttTelegram.png
 description: Forward MQTT messages from Smtp2MQTT and Webhook2MQTT to Telegram
 tags:
-   - Docker
-   - Raspberry Pi
-   - NodeRed
-   - Telegram
+  - Docker
+  - RaspberryPi
+  - NodeRed
+  - Telegram
 ---
 
 # Workflow for sending MQTT to Telegram

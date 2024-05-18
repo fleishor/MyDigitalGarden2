@@ -4,7 +4,7 @@ title: Integrate Voltcraft SEM6000 (homematic.fritz.box)
 image: Sem6000.png
 description: Integrate Voltcraft SEM6000 
 tags: 
-- Raspberry Pi
+- RaspberryPi
 - SEM6000
 - SmartHome
 ---

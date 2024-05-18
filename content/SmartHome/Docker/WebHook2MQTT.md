@@ -2,13 +2,12 @@
 date: 2023-01-01 21:54:05
 title: WebHook2MQTT
 description: Forward WebHook POST Requests as MQTT
-tags: 
-- Docker 
-- NodeJS
-- ExpressJS
-- MQTT
-- Typescript
-- Dockerfile
+tags:
+  - Docker
+  - NodeJS
+  - ExpressJS
+  - MQTT
+  - Typescript
 ---
 
 # References

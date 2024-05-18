@@ -3,10 +3,9 @@ date: 2022-11-15 13:50:19
 title: Deploy Nginx und NetShoot
 image: Kubernetes.png
 description: Deploy Nginx und NetShoot
-tags: 
-- Kubernetes 
-- Nginx 
-- Deployment
+tags:
+  - Kubernetes
+  - Nginx
 ---
 
 ## Übersicht
