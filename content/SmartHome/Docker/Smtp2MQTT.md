@@ -8,6 +8,7 @@ tags:
   - ExpressJS
   - MQTT
   - Typescript
+  - Dockerfile
 ---
 
 
@@ -325,10 +326,10 @@ services:
       - "2525:2525"
     restart: always
     networks:
-        - smarthome
+        - influxdb2
 
 networks:
     influxdb2:
         external: true
-        name: "smarthome"
+        name: "influxdb2"
 ~~~

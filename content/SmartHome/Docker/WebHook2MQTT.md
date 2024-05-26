@@ -2,18 +2,19 @@
 date: 2023-01-01 21:54:05
 title: WebHook2MQTT
 description: Forward WebHook POST Requests as MQTT
-tags:
-  - Docker
-  - NodeJS
-  - ExpressJS
-  - MQTT
-  - Typescript
+tags: 
+- Docker 
+- NodeJS
+- ExpressJS
+- MQTT
+- Typescript
+- Dockerfile
 ---
 
 # References
-- <https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-winston-and-morgan-to-log-node-js-applications/>
-- <http://www.steves-internet-guide.com/using-node-mqtt-client/>
-- <https://nodejs.org/en/docs/guides/nodejs-docker-webapp/>
+<https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-winston-and-morgan-to-log-node-js-applications/>
+<http://www.steves-internet-guide.com/using-node-mqtt-client/>
+<https://nodejs.org/en/docs/guides/nodejs-docker-webapp/>
 
 # File tsconfig.json
 ~~~json
@@ -239,11 +240,11 @@ services:
     user: 1014:995
     restart: always
     networks:
-        - smarthome
+        - influxdb2
     ports:
       - "3001:3001"
 networks:
     influxdb2:
         external: true
-        name: "smarthome"
+        name: "influxdb2"
 ~~~

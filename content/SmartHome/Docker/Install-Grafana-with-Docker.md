@@ -55,10 +55,10 @@ services:
       - "3000:3000"
     restart: always
     networks:
-        - smarthome
+        - influxdb2
         
 networks:
     influxdb2:
         external: true
-        name: "smarthome"
+        name: "influxdb2"
 ~~~

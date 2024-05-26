@@ -57,10 +57,10 @@ services:
     volumes:
       - /home/nodered/nodered_data:/data
     networks:
-        - smarthome
+        - influxdb2
         
 networks:
     influxdb2:
         external: true
-        name: "smarthome"
+        name: "influxdb2"
 ~~~

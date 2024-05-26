@@ -11,10 +11,7 @@ tags:
 
 # References
 
-- https://github.com/Schmidsfeld/TelegrafFritzBox
-- https://github.com/kbr/fritzconnection
-- https://fritzconnection.readthedocs.io/en/1.13.2/
-- https://avm.de/service/schnittstellen/
+<https://github.com/Lexiv/TelegrafFritzBox>
 
 # Create new user fritzbox
 
@@ -39,6 +36,12 @@ sudo -u fritzbox -i
 ~~~bash
 fritzbox@docker:~ $ id
 uid=1005(fritzbox) gid=1005(fritzbox) groups=1005(fritzbox),995(docker)
+~~~
+
+# Clone git repository
+
+~~~bash
+git clone https://github.com/Lexiv/TelegrafFritzBox.git
 ~~~
 
 # Install required packages
@@ -119,10 +122,10 @@ services:
       - TELEGRAF_PORT=8094
     restart: always
     networks:
-        - smarthome
+        - influxdb2
         
 networks:
     influxdb2:
         external: true
-        name: "smarthome"
+        name: "influxdb2"
 ~~~
