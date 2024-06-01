@@ -10,7 +10,7 @@ tags:
 
 ## Übersicht
 
-Diese Deployment erzeugt 6 Pods mit jeweils 2 Containers (nginx und netshoot) und 1 Init-Cotainer
+Diese Deployment erzeugt 6 Pods mit jeweils 2 Containers (nginx und netshoot) und 1 Init-Container
 
 ## Skripte
 

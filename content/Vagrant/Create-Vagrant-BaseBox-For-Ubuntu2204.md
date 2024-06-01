@@ -140,12 +140,14 @@ wget -O /home/vagrant/.ssh/authorized_keys https://raw.githubusercontent.com/has
 ### Package base box
 
 ~~~
-vagrant package --base ubuntu2204 --output ubuntu2204-2023-08-29.box
+vagrant package --base ubuntu2204 --output ubuntu2204.box
 ~~~
 
 ### Add base box to repository
 
 ~~~
-vagrant box add ubuntu2204-2023-08-29.box --name fleishor/ubuntu2204-2023-08-29
+vagrant box list
+vagrant box remove fleishor/ubuntu2204
+vagrant box add ubuntu2204.box --name fleishor/ubuntu2204
 ~~~
 
