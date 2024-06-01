@@ -5,7 +5,7 @@ image: Docker.png
 description: Installation steps for Docker on Raspberry Pi 4
 tags: 
 - Docker
-- RaspberryPi
+- Raspberry Pi
 ---
 
 # Installation Guides

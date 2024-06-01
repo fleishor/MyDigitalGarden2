@@ -4,7 +4,7 @@ title: Install-Telegraf-on-RaspberryPi
 image: Telegraf.png
 description: Installation steps for Telegraf on RaspberryPi without Docker
 tags:
-- RaspberryPi
+- Raspberry Pi
 - SmartHome
 ---
 
