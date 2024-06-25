@@ -96,7 +96,7 @@ networks:
 
 [[outputs.influxdb_v2]]
 urls = ["http://influxdb2:8086"]
-token = "2vhOdg7ykvPq4cwUkAX-o2_HORSPVsuBL2gRWrAO59ZKA-htFg0Ibal5S3KYUGM3xZcIygvhUqGSX96U8miXWA=="
+token = "***"
 organization = "fleishor"
 bucket = "fleishor"
 
