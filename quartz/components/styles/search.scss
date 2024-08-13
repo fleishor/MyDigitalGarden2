@@ -9,14 +9,14 @@
     background-color: var(--highlight);
     border-radius: 8px;
     height: 2rem;
+    padding: 0;
     display: flex;
     align-items: center;
+    text-align: inherit;
     cursor: pointer;
     white-space: nowrap;
-
-    & > div {
-      flex-grow: 1;
-    }
+    width: 100%;
+    justify-content: space-between;
 
     & > p {
       display: inline;

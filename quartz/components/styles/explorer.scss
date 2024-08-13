@@ -6,7 +6,6 @@
 }
 
 button#explorer {
-  all: unset;
   background-color: transparent;
   border: none;
   text-align: left;
@@ -16,7 +15,7 @@ button#explorer {
   display: none;
   align-items: center;
 
-  & h1 {
+  & h2 {
     font-size: 1rem;
     display: inline-block;
     margin: 0;
