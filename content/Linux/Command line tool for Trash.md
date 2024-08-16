@@ -7,17 +7,21 @@ tags:
 - Linux
 ---
 
-# Quellen
-https://github.com/andreafrancia/trash-cli
+## Quellen
 
-# Trash cli tools
-## Install trash-cli tools
+<https://github.com/andreafrancia/trash-cli>
+
+## Trash cli tools
+
+### Install trash-cli tools
+
 ~~~bash
 sudo apt install trash-cli
 ~~~
 
-## trash cli tools
-- trash-put: trash files and directories. 
+### trash cli tools
+
+- trash-put: trash files and directories.
 - trash-empty: empty the trashcan(s).
 - trash-list: list trashed files.
 - trash-restore: restore a trashed file.

@@ -56,6 +56,7 @@ scrape_configs:
 ## RegEx for parsing the syslogs
 
 "P" is required
+
 ~~~
 (?P<month>\S+)\s+(?P<date>[0-9]{1,2})\s+(?P<time>[0-9]+:[0-9]+:[0-9]+)\s+(?P<hostname>\S+)\s+(?P<daemon>\S+)(?P<pid>\[[0-9]+\]):\s+
 ~~~

@@ -8,38 +8,38 @@ tags:
 - SmartHome
 ---
 
-# Create new user grafana
+## Create new user grafana
 
 ~~~bash
 sudo useradd -m grafana
 ~~~
 
-# Add user grafana to docker group
+## Add user grafana to docker group
 
 ~~~bash
 sudo usermod -aG docker grafana
 ~~~
 
-# Login as user grafana
+## Login as user grafana
 
 ~~~bash
 sudo -u grafana -i
 ~~~
 
-# Get uid and gid for user grafana
+## Get uid and gid for user grafana
 
 ~~~bash
 grafana@docker:~ $ id
 uid=1004(grafana) gid=1004(grafana) groups=1004(grafana),995(docker)
 ~~~
 
-# Create directories for Grafana
+## Create directories for Grafana
 
 ~~~bash
 mkdir var_lib
 ~~~
 
-# docker-compose.yaml file
+## docker-compose.yaml file
 
 ~~~bash
 version: "3.5"

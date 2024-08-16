@@ -29,4 +29,3 @@ Leider wird die Anzeige abgeschnitten
 ~~~
 influx query 'import "influxdata/influxdb/schema" schema.measurements(bucket: "HomeAssistant")'
 ~~~
-

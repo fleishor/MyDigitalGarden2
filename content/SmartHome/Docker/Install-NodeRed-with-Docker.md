@@ -8,38 +8,38 @@ tags:
 - SmartHome
 ---
 
-# Create new user nodered
+## Create new user nodered
 
 ~~~bash
 sudo useradd -m nodered
 ~~~
 
-# Add user nodered to docker group
+## Add user nodered to docker group
 
 ~~~bash
 sudo usermod -aG docker nodered
 ~~~
 
-# Login as user nodered
+## Login as user nodered
 
 ~~~bash
 sudo -u nodered -i
 ~~~
 
-# Get uid and gid for user nodered
+## Get uid and gid for user nodered
 
 ~~~bash
 nodered@docker:~ $ id
 uid=1006(nodered) gid=1006(nodered) groups=1006(nodered),995(docker)
 ~~~
 
-# Create directories for nodered
+## Create directories for nodered
 
 ~~~bash
 mkdir nodered_data
 ~~~
 
-# docker-compose.yaml file
+## docker-compose.yaml file
 
 ~~~bash
 version: '3.5'

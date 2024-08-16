@@ -8,38 +8,38 @@ tags:
 - SmartHome
 ---
 
-# Create new user loki
+## Create new user loki
 
 ~~~bash
 sudo useradd -m loki
 ~~~
 
-# Add user loki to docker group
+## Add user loki to docker group
 
 ~~~bash
 sudo usermod -aG docker loki
 ~~~
 
-# Login as user loki
+## Login as user loki
 
 ~~~bash
 sudo -u loki -i
 ~~~
 
-# Get uid and gid for user loki
+## Get uid and gid for user loki
 
 ~~~bash
 loki@docker:~ $ id
 uid=1007(loki) gid=1007(loki) groups=1007(loki),995(docker)
 ~~~
 
-# Create directories for loki
+## Create directories for loki
 
 ~~~bash
 mkdir etc_loki
 ~~~
 
-# docker-compose.yaml file
+## docker-compose.yaml file
 
 ~~~yaml
 version: "3.5"

@@ -8,24 +8,24 @@ tags:
 - Shortcuts
 ---
 
-# Creating a new pane
+## Creating a new pane
 
-## Horizontal pane
+### Horizontal pane
 
 <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>+</kbd>
 
-## Vertical pane
+### Vertical pane
 
 <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>-</kbd>
 
-# Switching between panes
+## Switching between panes
 
 <kbd>alt</kbd> + <kbd>arrow keys</kbd>
 
-# Resizing a pane
+## Resizing a pane
 
 <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>arrow keys</kbd>
 
-# Closing a pane
+## Closing a pane
 
 <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>w</kbd>

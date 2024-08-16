@@ -7,15 +7,15 @@ tags:
 - Linux
 ---
 
-# SNMP client
+## SNMP client
 
-## Installation
+### Installation
 
 ~~~bash
 > sudo apt install snmp
 ~~~
 
-## snmpget
+### snmpget
 
 ~~~bash
 pi@docker:~ $ snmpget -v2c -c geheim 192.168.178.4 SNMPv2-MIB::sysName.0
@@ -23,7 +23,7 @@ SNMPv2-MIB::sysName.0 = STRING: NetgearWohnzimmer
 pi@docker:~ $
 ~~~
 
-## snmptable
+### snmptable
 
 ~~~bash
 pi@docker:~ $ snmptable -v2c -c geheim 192.168.178.4 IF-MIB::ifXTable
@@ -42,7 +42,7 @@ pi@docker:~ $
 
 ~~~
 
-## snmpwalk
+### snmpwalk
 
 ~~~bash
 pi@docker:~ $ snmpwalk -v2c -c geheim 192.168.178.4 IF-MIB::ifXTable

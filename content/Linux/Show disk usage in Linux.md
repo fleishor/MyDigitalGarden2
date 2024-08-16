@@ -7,19 +7,22 @@ tags:
 - Linux
 ---
 
-# NCDU
-## Install ncdu
+## NCDU
+
+### Install ncdu
+
 ~~~bash
 sudo apt install ncdu
 ~~~
 
-## Use ncdu
+### Use ncdu
+
 ~~~bash
 fleishor@desktop:~$ ncdu
 ~~~
 
 ![[ncdu1.png]]
 
-Navigate through directories with <kbd>CursorUp</kbd>, <kbd>CursorDown</kbd>, <kbd>Enter</kbd> 
+Navigate through directories with <kbd>CursorUp</kbd>, <kbd>CursorDown</kbd>, <kbd>Enter</kbd>
 
 ![[ncdu2.png]]

@@ -8,38 +8,38 @@ tags:
 - SmartHome
 ---
 
-# Create new user portainer
+## Create new user portainer
 
 ~~~bash
 sudo useradd -m portainer
 ~~~
 
-# Add user portainer to docker group
+## Add user portainer to docker group
 
 ~~~bash
 sudo usermod -aG docker portainer
 ~~~
 
-# Login as user portainer
+## Login as user portainer
 
 ~~~bash
 sudo -u portainer -i
 ~~~
 
-# Get uid and gid for user portainer
+## Get uid and gid for user portainer
 
 ~~~bash
 portainer@docker:~ $ id
 uid=1001(portainer) gid=1001(portainer) groups=1001(portainer),995(docker)
 ~~~
 
-# Create directories for portainer
+## Create directories for portainer
 
 ~~~bash
 mkdir portainer_data
 ~~~
 
-# docker-compose.yaml file
+## docker-compose.yaml file
 
 ~~~yaml
 version: '3.5'
@@ -57,7 +57,7 @@ services:
       - /home/portainer/portainer_data:/data
 ~~~
 
-# Update portainer
+## Update portainer
 
 ~~~bash
 docker stop portainer

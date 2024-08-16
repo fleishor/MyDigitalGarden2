@@ -9,11 +9,11 @@ tags:
 
 ## Github GraphQL explorer
 
-Github offers a very good GraphQL api including an explorer: https://docs.github.com/de/graphql/overview/explorer
+Github offers a very good GraphQL api including an explorer: <https://docs.github.com/de/graphql/overview/explorer>
 
 ![[GithubExplorer.png]]
 
-At first we must SignIn to Github and give the explorer access to Github 
+At first we must SignIn to Github and give the explorer access to Github
 
 After SignIn we can run our first query
 

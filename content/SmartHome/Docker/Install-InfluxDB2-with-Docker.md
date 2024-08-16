@@ -8,32 +8,32 @@ tags:
 - SmartHome
 ---
 
-# Create new user influxdb2
+## Create new user influxdb2
 
 ~~~bash
 sudo useradd -m influxdb2
 ~~~
 
-# Add user influxdb2 to docker group
+## Add user influxdb2 to docker group
 
 ~~~bash
 sudo usermod -aG docker influxdb2
 ~~~
 
-# Login as user influxdb2
+## Login as user influxdb2
 
 ~~~bash
 sudo -u influxdb2 -i
 ~~~
 
-# Get uid and gid for user influxdb2
+## Get uid and gid for user influxdb2
 
 ~~~bash
 influxdb2@docker:~ $ id
 uid=1002(influxdb2) gid=1002(influxdb2) groups=1002(influxdb2),995(docker)
 ~~~
 
-# Create directories for influxdb2
+## Create directories for influxdb2
 
 ~~~bash
 influxdb2@docker:~ $ mkdir etc_influxdb2
@@ -43,7 +43,7 @@ drwxr-xr-x 2 influxdb2 influxdb2 4096 Jul  6 08:08 etc_influxdb2
 drwxr-xr-x 2 influxdb2 influxdb2 4096 Jul  6 08:08 var_lib_influxdb2
 ~~~
 
-# docker-compose.yaml file
+## docker-compose.yaml file
 
 - with long syntax for volumes
 - create a new bridge network for influxdb2 and related containers

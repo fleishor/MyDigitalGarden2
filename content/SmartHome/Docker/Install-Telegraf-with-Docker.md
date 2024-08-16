@@ -8,38 +8,38 @@ tags:
 - SmartHome
 ---
 
-# Create new user telegraf
+## Create new user telegraf
 
 ~~~bash
 sudo useradd -m telegraf
 ~~~
 
-# Add user telegraf to docker group
+## Add user telegraf to docker group
 
 ~~~bash
 sudo usermod -aG docker telegraf
 ~~~
 
-# Login as user telegraf
+## Login as user telegraf
 
 ~~~bash
 sudo -u telegraf -i
 ~~~
 
-# Get uid and gid for user telegraf
+## Get uid and gid for user telegraf
 
 ~~~bash
 telegraf@docker:~ $ id
 uid=1003(telegraf) gid=1003(telegraf) groups=1003(telegraf),995(docker)
 ~~~
 
-# Create directories for telegraf
+## Create directories for telegraf
 
 ~~~bash
 mkdir etc_telegraf
 ~~~
 
-## docker-compose.yaml
+### docker-compose.yaml
 
 ~~~yaml
 version: "3.5"
@@ -73,7 +73,7 @@ networks:
     name: "influxdb2"
 ~~~
 
-# telegraf.conf
+## telegraf.conf
 
 ~~~ini
 # Telegraf Configuration

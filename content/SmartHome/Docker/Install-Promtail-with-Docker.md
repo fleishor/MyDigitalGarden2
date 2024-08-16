@@ -8,31 +8,31 @@ tags:
 - SmartHome
 ---
 
-# Create new user promtail
+## Create new user promtail
 
 ~~~bash
 sudo useradd -m promtail
 ~~~
 
-# Add user promtail to docker group
+## Add user promtail to docker group
 
 ~~~bash
 sudo usermod -aG docker promtail
 ~~~
 
-# Login as user promtail
+## Login as user promtail
 
 ~~~bash
 sudo -u promtail -i
 ~~~
 
-# Create directories for promtail
+## Create directories for promtail
 
 ~~~bash
 mkdir etc_promtail
 ~~~
 
-# docker-compose.yaml file
+## docker-compose.yaml file
 
 ~~~yaml
 version: "3.5"
@@ -57,10 +57,11 @@ networks:
     name: "influxdb2"
 ~~~
 
-# Gather journald logs and Docker container logs
+## Gather journald logs and Docker container logs
 
 ![[SmartHome/Docker/Install-Promtail-with-Docker/overview.svg]]
-# /etc/docker/daemon.json
+
+## /etc/docker/daemon.json
 
 <https://docs.docker.com/config/containers/logging/log_tags/>
 
@@ -92,7 +93,7 @@ Example log line
 }
 ~~~
 
-# /etc/promtail/promtail.yaml
+## /etc/promtail/promtail.yaml
 
 Promtail configuration for sending
 

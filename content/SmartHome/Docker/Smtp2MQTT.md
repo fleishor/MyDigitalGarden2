@@ -11,15 +11,15 @@ tags:
   - Dockerfile
 ---
 
+## References
 
-# References
 - <https://nodemailer.com/extras/smtp-server/>
 - <https://github.com/trentm/node-bunyan>
 - <http://www.steves-internet-guide.com/using-node-mqtt-client/>
 - <https://nodejs.org/en/docs/guides/nodejs-docker-webapp/>
 
+## File tsconfig.json
 
-# File tsconfig.json
 ~~~json
 {
   "compilerOptions": {
@@ -34,7 +34,8 @@ tags:
 }
 ~~~
 
-# File  package.json
+## File  package.json
+
 ~~~json
 {
   "name": "smtp2mqtt",
@@ -67,7 +68,8 @@ tags:
 }
 ~~~
 
-# File .eslintrc.jrc
+## File .eslintrc.jrc
+
 ~~~javascript
 module.exports = {
    extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
@@ -77,8 +79,8 @@ module.exports = {
 };
 ~~~
 
+## Dockerfile
 
-# Dockerfile
 ~~~yaml
 FROM node:19.3.0-alpine3.16
 
@@ -103,22 +105,26 @@ EXPOSE 3001
 CMD [ "node", "/smtp2mqtt/smtp2mqtt.js" ]
 ~~~
 
-# Generate Javascript from Typescript
+## Generate Javascript from Typescript
+
 ~~~bash
 npm run build
 ~~~
 
-# Run smtp2mqtt.js
+## Run smtp2mqtt.js
+
 ~~~bash
 npm run smtp2mqtt
 ~~~
 
-# Create Docker image
+## Create Docker image
+
 ~~~bash
 npm run buildImage
 ~~~
 
-# Source code smtp2mqtt.ts
+## Source code smtp2mqtt.ts
+
 ~~~typescript
 import { SMTPServer } from "smtp-server";
 import { simpleParser } from "mailparser";
@@ -284,34 +290,39 @@ logger.info({}, "Startup SMTP Server");
 smtpServer.listen(smtpServerPort, "0.0.0.0");
 ~~~
 
-# Create new user smtp2mqtt
+## Create new user smtp2mqtt
+
 ~~~bash
 sudo useradd -m smtp2mqtt
 ~~~
 
-# Add user smtp2mqtt to docker group
+## Add user smtp2mqtt to docker group
+
 ~~~bash
 sudo usermod -aG docker smtp2mqtt
 ~~~
 
-# Login as user smtp2mqtt
+## Login as user smtp2mqtt
+
 ~~~bash
 sudo -u smtp2mqtt -i
 ~~~
 
-# Get uid and gid for user smtp2mqtt
+## Get uid and gid for user smtp2mqtt
+
 ~~~bash
 smtp2mqtt@docker:~ $ id
 uid=1014(smtp2mqtt) gid=1014(smtp2mqtt) groups=1014(smtp2mqtt),995(docker)
 ~~~
 
-# Create directories for smtp2mqtt
+## Create directories for smtp2mqtt
 
 ~~~bash
 mkdir storage
 ~~~
 
-# File docker-compose.yaml
+## File docker-compose.yaml
+
 ~~~yaml
 version: "3.5"
 

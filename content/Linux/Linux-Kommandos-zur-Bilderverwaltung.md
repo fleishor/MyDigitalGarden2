@@ -7,23 +7,27 @@ tags:
 - Linux
 ---
 
-# Identische Dateien finden
+## Identische Dateien finden
+
 ~~~bash
 fdupes --recurse --reverse  /srv/dev-disk-by-label-Disk01/Bilder
 ~~~
 
-# ... und löschen
-Im Set der Duplicate wird die erste behalten und alle anderen gelöscht. 
+## ... und löschen
+
+Im Set der Duplicate wird die erste behalten und alle anderen gelöscht.
+
 ~~~bash
 fdupes --recurse --reverse --delete --noprompt /srv/dev-disk-by-label-Disk01/Bilder
 ~~~
 
-# Bilder nach Datum YYYY-MM in Unterverzeichnisse sortieren
+## Bilder nach Datum YYYY-MM in Unterverzeichnisse sortieren
+
 ~~~bash
 exiftool -d %Y-%m "-directory<createdate" *.jpg
 ~~~
 
-# Bilder aus allen Unterverzeichnissen in ein Verzeichnis kopieren
+## Bilder aus allen Unterverzeichnissen in ein Verzeichnis kopieren
 
 ~~~bash
 find ./*__ -type f -exec cp --backup=numbered -t ./tmp {} +

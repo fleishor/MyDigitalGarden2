@@ -9,9 +9,12 @@ tags:
 - dotnet
 ---
 
-# References
+## References
+
 [PDFSharp](http://www.pdfsharp.net/)
-# Code
+
+## Code
+
 ~~~C#
 using PdfSharp.Drawing;
 using PdfSharp.Pdf;

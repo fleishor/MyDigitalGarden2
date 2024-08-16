@@ -7,7 +7,8 @@ tags:
 - Linux
 ---
 
-# Get partitions of a HDD
+## Get partitions of a HDD
+
 ~~~bash
 sudo parted -l
 
@@ -47,19 +48,20 @@ Nummer  Anfang  Ende   Größe   Dateisystem  Name                          Flag
  6      483GB   500GB  16,6GB  ntfs         Basic data partition          versteckt, diag
 ~~~
 
-# Dump HDD to image file
+## Dump HDD to image file
+
 ~~~bash
 sudo dd if=/dev/sdc4 of=sdc4.img status=progress
 ~~~
 
-# Mount image to file system /mnt/ntfs1
+## Mount image to file system /mnt/ntfs1
 
 ~~~bash
 sudo mount -o loop sdc4.img /mnt/ntfs1
 ~~~
 
-# Unmount 
+## Unmount
+
 ~~~bash
 sudo umount /mnt/ntfs1/
 ~~~
-

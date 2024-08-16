@@ -150,4 +150,3 @@ vagrant box list
 vagrant box remove fleishor/ubuntu2204
 vagrant box add ubuntu2204.box --name fleishor/ubuntu2204
 ~~~
-

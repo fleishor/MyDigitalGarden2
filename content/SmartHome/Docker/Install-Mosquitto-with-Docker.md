@@ -8,38 +8,38 @@ tags:
 - SmartHome
 ---
 
-# Create new user mosquitto
+## Create new user mosquitto
 
 ~~~bash
 sudo useradd -m mosquitto
 ~~~
 
-# Add user mosquitto to docker group
+## Add user mosquitto to docker group
 
 ~~~bash
 sudo usermod -aG docker mosquitto
 ~~~
 
-# Login as user mosquitto
+## Login as user mosquitto
 
 ~~~bash
 sudo -u mosquitto -i
 ~~~
 
-# Get uid and gid for user mosquitto
+## Get uid and gid for user mosquitto
 
 ~~~bash
 mosquitto@docker:~ $ id
 uid=1013(mosquitto) gid=1013(mosquitto) groups=1013(mosquitto),995(docker)
 ~~~
 
-# Create directories for Mosquitto
+## Create directories for Mosquitto
 
 ~~~bash
 mkdir mosquitto
 ~~~
 
-# docker-compose.yaml file
+## docker-compose.yaml file
 
 ~~~bash
 version: "3.5"
@@ -66,7 +66,8 @@ networks:
         name: "influxdb2"
 ~~~
 
-# mosquitto.conf
+## mosquitto.conf
+
 ~~~
 allow_anonymous true
 listener 1883

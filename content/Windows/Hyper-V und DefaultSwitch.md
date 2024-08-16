@@ -7,7 +7,8 @@ tags:
 - Linux
 ---
 
-# Commands
+## Commands
+
 ~~~
 PS C:\Users\fleishor> Get-VMSwitch
 
@@ -67,7 +68,6 @@ SkipAsSource      : False
 PolicyStore       : ActiveStore
 ~~~
 
-
 ~~~
 PS C:\Users\fleishor> New-VMSwitch -SwitchName "MyHyperV NAT" -SwitchType Internal
 
@@ -76,7 +76,6 @@ Name         SwitchType NetAdapterInterfaceDescription
 MyHyperV NAT Internal
 
 ~~~
-
 
 ~~~
 PS C:\Users\fleishor> Get-NetAdapter
@@ -91,7 +90,6 @@ Bluetooth-Netzwerkverbin… Bluetooth Device (Personal Area Networ…      25 Di
 vEthernet (Extern)        Hyper-V Virtual Ethernet Adapter #2          20 Up           9C-EB-E8-62-55-E8         1 Gbps
 Ethernet 7                PANGP Virtual Ethernet Adapter Secure        19 Disabled     02-50-41-00-00-01         2 Gbps
 ~~~
-
 
 ~~~
 PS C:\Users\fleishor> New-NetIPAddress -IPAddress 192.168.0.1 -PrefixLength 24 -InterfaceIndex 79
@@ -125,7 +123,6 @@ SkipAsSource      : False
 PolicyStore       : PersistentStore
 ~~~
 
-
 ~~~
 PS C:\Users\fleishor> New-NetNat -Name "MyHyperV NAT" -InternalIPInterfaceAddressPrefix 192.168.0.0/24
 
@@ -142,4 +139,3 @@ UdpInboundRefresh                : False
 Store                            : Local
 Active                           : True
 ~~~
-

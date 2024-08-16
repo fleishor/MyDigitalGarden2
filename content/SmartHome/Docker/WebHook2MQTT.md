@@ -11,12 +11,14 @@ tags:
 - Dockerfile
 ---
 
-# References
+## References
+
 <https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-winston-and-morgan-to-log-node-js-applications/>
 <http://www.steves-internet-guide.com/using-node-mqtt-client/>
 <https://nodejs.org/en/docs/guides/nodejs-docker-webapp/>
 
-# File tsconfig.json
+## File tsconfig.json
+
 ~~~json
 {
   "compilerOptions": {
@@ -31,7 +33,8 @@ tags:
 }
 ~~~
 
-# File  package.json
+## File package.json
+
 ~~~json
 {
   "name": "webhook2mqtt",
@@ -64,7 +67,8 @@ tags:
 }
 ~~~
 
-# File .eslintrc.jrc
+## File .eslintrc.jrc
+
 ~~~javascript
 module.exports = {
    extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
@@ -74,7 +78,8 @@ module.exports = {
 };
 ~~~
 
-# Dockerfile
+## Dockerfile
+
 ~~~yaml
 FROM node:19.3.0-alpine3.16
 
@@ -97,22 +102,26 @@ EXPOSE 3001
 CMD [ "node", "/webhook2mqtt/webhook2mqtt.js" ]
 ~~~
 
-# Generate Javascript from Typescript
+## Generate Javascript from Typescript
+
 ~~~bash
 npm run build
 ~~~
 
-# Run webhook2mqtt.js
+## Run webhook2mqtt.js
+
 ~~~bash
 npm run webhook2mqtt
 ~~~
 
-# Create Docker image
+## Create Docker image
+
 ~~~bash
 npm run buildImage
 ~~~
 
-# Source code webhook2mqtt.ts
+## Source code webhook2mqtt.ts
+
 ~~~typescript
 import express from "express";
 import bodyParser from "body-parser";
@@ -208,28 +217,33 @@ expressApp.listen(expressPort, () => {
 });
 ~~~
 
-# Create new user webhook2mqtt
+## Create new user webhook2mqtt
+
 ~~~bash
 sudo useradd -m webhook2mqtt
 ~~~
 
-# Add user webhook2mqtt to docker group
+## Add user webhook2mqtt to docker group
+
 ~~~bash
 sudo usermod -aG docker webhook2mqtt
 ~~~
 
-# Login as user webhook2mqtt
+## Login as user webhook2mqtt
+
 ~~~bash
 sudo -u webhook2mqtt -i
 ~~~
 
-# Get uid and gid for user webhook2mqtt
+## Get uid and gid for user webhook2mqtt
+
 ~~~bash
 webhook2mqtt@docker:~ $ id
 uid=1014(webhook2mqtt) gid=1014(webhook2mqtt) groups=1014(webhook2mqtt),995(docker)
 ~~~
 
-# File docker-compose.yaml
+## File docker-compose.yaml
+
 ~~~yaml
 version: "3.5"
 

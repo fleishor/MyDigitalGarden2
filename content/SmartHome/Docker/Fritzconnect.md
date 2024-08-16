@@ -8,13 +8,14 @@ tags:
   - FritzBox
 ---
 
-## Fritzconnect 
+## Fritzconnect
 
 ### References
-- https://avm.de/service/schnittstellen/
-- https://fritzconnection.readthedocs.io/en/1.13.2/
-- https://github.com/kbr/fritzconnection
-- https://github.com/Schmidsfeld/TelegrafFritzBox
+
+- <https://avm.de/service/schnittstellen/>
+- <https://fritzconnection.readthedocs.io/en/1.13.2/>
+- <https://github.com/kbr/fritzconnection>
+- <https://github.com/Schmidsfeld/TelegrafFritzBox>
 
 ### Installation
 

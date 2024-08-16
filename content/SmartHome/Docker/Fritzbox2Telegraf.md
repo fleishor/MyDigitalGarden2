@@ -11,10 +11,10 @@ tags:
 
 ## References
 
-- https://github.com/Schmidsfeld/TelegrafFritzBox
-- https://github.com/kbr/fritzconnection
-- https://fritzconnection.readthedocs.io/en/1.13.2/
-- https://avm.de/service/schnittstellen/
+- <https://github.com/Schmidsfeld/TelegrafFritzBox>
+- <https://github.com/kbr/fritzconnection>
+- <https://fritzconnection.readthedocs.io/en/1.13.2/>
+- <https://avm.de/service/schnittstellen/>
 
 ## Create new user fritzbox
 
@@ -137,7 +137,7 @@ networks:
 
 ## Configuration of Telegraf
 
-With ```namedrop``` and ```namepass``` it's possible to redirect messages to different buckets. 
+With ```namedrop``` and ```namepass``` it's possible to redirect messages to different buckets.
 
 ~~~
 ...
