@@ -1,10 +1,12 @@
 ---
+draft: true
 date: <% tp.file.creation_date("YYYY-MM-DD") %>
 title: 
-image: LinuxCommandLine.png
+image:
 description: 
 tags: 
-- Linux
 ---
 
-# 
+## References
+
+## 

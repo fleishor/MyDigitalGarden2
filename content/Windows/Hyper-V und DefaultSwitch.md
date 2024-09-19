@@ -1,7 +1,7 @@
 ---
 date: 2024-06-05
-title: 
-image: LinuxCommandLine.png
+title: Create and configure a new NAT switch for Hyper-V
+image: Windows.png
 description: 
 tags: 
 - Linux

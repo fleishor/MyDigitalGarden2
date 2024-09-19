@@ -9,7 +9,7 @@ tags:
 
 ## Github GraphQL explorer
 
-Github offers a very good GraphQL api including an explorer: <https://docs.github.com/de/graphql/overview/explorer>
+Github offers a very good GraphQL api including an explorer: <https://docs.github.com/de/graphql/overview/explorer> based on GraphiQL <https://github.com/graphql/graphiql>
 
 ![[GithubExplorer.png]]
 
@@ -23,3 +23,7 @@ Important keyboard short cuts:
 
 - <kbd>Ctrl</kbd> <kbd>Enter</kbd>: Run the query
 - <kbd>Ctrl</kbd> <kbd>Space</kbd>: Open IntelliSense
+
+GraphQL explorer has also a kind of IntelliSense which shows all possible attributes
+
+![[IntelliSense.png]]
