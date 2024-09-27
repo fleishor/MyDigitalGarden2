@@ -37,8 +37,8 @@ kiota generate \
    --exclude-backward-compatible \
    --additional-data false
    --language CSharp \
-   --class-name AutobahnClientApi \
+   --class-name AutobahnClient \
    --namespace-name Bund.API.Autobahn.Client \
    --openapi https://autobahn.api.bund.dev/openapi.yaml \
-   --output ./AutobahnClientApi
+   --output ./AutobahnClient
 ```
