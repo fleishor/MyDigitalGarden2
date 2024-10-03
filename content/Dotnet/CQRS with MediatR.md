@@ -1,5 +1,4 @@
 ---
-draft: true
 date: 2024-09-24
 title: CQRS with MediatR
 image: MediatR.png
@@ -17,8 +16,9 @@ tags:
 ## Project settings
 ### Directory.Build.props
 
-<!-- https://raw.githubusercontent.com/fleishor/MyDevelopment/refs/heads/master/DotNet/Mediatr/Directory.Build.props -->
+Global settings for all projects in subfolders
 
+<!-- https://raw.githubusercontent.com/fleishor/MyDevelopment/refs/heads/master/DotNet/Mediatr/Directory.Build.props -->
 ~~~xml
 <Project>
   <PropertyGroup>
@@ -38,8 +38,9 @@ tags:
 
 ### Directory.Build.targets
 
-<!-- https://raw.githubusercontent.com/fleishor/MyDevelopment/refs/heads/master/DotNet/Mediatr/Directory.Build.targets -->
+Nuget packages which are referenced in projects in subfolders 
 
+<!-- https://raw.githubusercontent.com/fleishor/MyDevelopment/refs/heads/master/DotNet/Mediatr/Directory.Build.targets -->
 ~~~xml
 <Project>
   <PropertyGroup>

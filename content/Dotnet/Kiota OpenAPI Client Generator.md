@@ -1,5 +1,4 @@
 ---
-draft: true
 date: 2024-09-19
 title: Kiota OpenApi client generator
 image: Kiota.png

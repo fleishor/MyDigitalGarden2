@@ -1,5 +1,5 @@
 ---
-draft:
+draft: true
 date: 2024-05-29
 title: 
 image: LinuxCommandLine.png
