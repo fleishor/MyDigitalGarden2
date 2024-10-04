@@ -81,6 +81,9 @@ button#explorer {
       pointer-events: all;
     }
   }
+  > #explorer-ul {
+    max-height: none;
+  }
 }
 
 svg {

@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss" as *;
+
 .backlinks {
   background-color: var(--highlight);
   border-radius: 8px;
@@ -17,6 +19,16 @@
       & > a {
         background-color: transparent;
       }
+    }
+  }
+
+  & > .overflow {
+    &:after {
+      display: none;
+    }
+    height: auto;
+    @media all and ($desktop) {
+      height: 250px;
     }
   }
 }
