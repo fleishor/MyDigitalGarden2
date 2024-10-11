@@ -29,7 +29,7 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FolderPageOptions>> = (user
   const opts: FullPageLayout = {
     ...sharedPageComponents,
     ...defaultListPageLayout,
-    pageBody: FolderContent({ showFolderCount: false }),
+    pageBody: FolderContent({ sort: userOpts?.sort }),
     ...userOpts,
   }
 

@@ -13,10 +13,10 @@ tags:
 
 ### Übersicht
 
-
 ## Check ClusterIP service
+
 - Der ClusterIP Service hat wieder einen eigenen IP-Bereich (10.110.0.0/16)
- 
+
 ~~~
 fleishor@desktop:~/vagrant-kubernetes-cluster$ kubectl get services
 NAME                      TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)    AGE
@@ -31,7 +31,7 @@ nginx-service-clusterip   ClusterIP   10.110.1.81   <none>        8080/TCP   23h
 - HTTP Anfragen an den ClusterIP Service leitet dieser an die Pods weiter (Round-Robin-Verfahren oder sowas ähnliches)
 - Hauptaufgabe der ClusterIP ist das zusammensuchen der Pods und ein LoadBalancing auf die Pods
 - Innerhalb eines Pods kann auch direkt auf einen anderen Pod zugegriffen werden.
- 
+
 ~~~
 fleishor@desktop:~/vagrant-kubernetes-cluster$ kubectl exec -it nginx-deployment-c4b4cb578-4jqtr -c netshoot-container -- /bin/bash
 bash-5.2# curl nginx-service-clusterip:8080
@@ -61,4 +61,3 @@ spec:
     targetPort: 80 # Port in Pod which should be exposed
     protocol: TCP
 ~~~
-

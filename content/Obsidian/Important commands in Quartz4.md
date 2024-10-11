@@ -7,7 +7,7 @@ tags:
   - Obsidian
 ---
 
-# Important commands in Quartz4
+## Important commands in Quartz4
 
 - `npx quartz sync --no-pull`: Sync Obsidian with Github
 - `npx quartz update`: Update Quartz

@@ -1,4 +1,5 @@
 ---
+showOnIndexPage: true
 date: 2024-09-19
 title: Kiota OpenApi client generator
 image: Kiota.png
@@ -9,8 +10,8 @@ tags:
 
 ## References
 
-[Kiota Github](https://github.com/microsoft/kiota)
-[Kiota documentation](https://learn.microsoft.com/de-de/openapi/kiota/)
+- [Kiota Github](https://github.com/microsoft/kiota)
+- [Kiota documentation](https://learn.microsoft.com/de-de/openapi/kiota/)
 
 ## Install Kiota as .NET tool
 
@@ -29,7 +30,7 @@ dotnet add package Microsoft.Kiota.Serialization.Text
 dotnet add package Microsoft.Kiota.Serialization.Multipart
 ``````
 
-## Generate the client API for https://autobahn.api.bund.dev
+## Generate the client API for <https://autobahn.api.bund.dev>
 
 ```
 kiota generate \

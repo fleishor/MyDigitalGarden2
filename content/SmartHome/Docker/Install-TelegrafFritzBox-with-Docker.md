@@ -9,55 +9,55 @@ tags:
 - SmartHome
 ---
 
-# References
+## References
 
 <https://github.com/Lexiv/TelegrafFritzBox>
 
-# Create new user fritzbox
+## Create new user fritzbox
 
 ~~~bash
 sudo useradd -m fritzbox
 ~~~
 
-# Add user fritzbox to docker group
+## Add user fritzbox to docker group
 
 ~~~bash
 sudo usermod -aG docker fritzbox
 ~~~
 
-# Login as user fritzbox
+## Login as user fritzbox
 
 ~~~bash
 sudo -u fritzbox -i
 ~~~
 
-# Get uid and gid for user fritzbox
+## Get uid and gid for user fritzbox
 
 ~~~bash
 fritzbox@docker:~ $ id
 uid=1005(fritzbox) gid=1005(fritzbox) groups=1005(fritzbox),995(docker)
 ~~~
 
-# Clone git repository
+## Clone git repository
 
 ~~~bash
 git clone https://github.com/Lexiv/TelegrafFritzBox.git
 ~~~
 
-# Install required packages
+## Install required packages
 
 ~~~bash
 apt install python3-pip
 pip3 install fritzconnection
 ~~~
 
-# crontab
+## crontab
 
 ~~~crontab
 */5 * * * * /home/fritzbox/telegrafFritzBox.sh
 ~~~
 
-# telegrafFritzBox.sh
+## telegrafFritzBox.sh
 
 ~~~bash
 #!/bin/sh
@@ -66,7 +66,7 @@ python3 /home/fritzbox/telegrafFritzBox.py -u ${FRITZ_USERNAME} -p ${FRITZ_PASSW
 python3 /home/fritzbox/telegrafFritzSmartHome.py -u ${FRITZ_USERNAME} -p ${FRITZ_PASSWORD} -i ${FRITZ_ADDRESS} | nc -q 1 ${TELEGRAF_HOSTNAME} ${TELEGRAF_PORT}
 ~~~
 
-# Dockerfile
+## Dockerfile
 
 ~~~dockerfile
 FROM alpine:latest
@@ -98,13 +98,13 @@ RUN crontab /etc/cron/crontab
 CMD ["sudo", "-E", "crond", "-f"]
 ~~~
 
-# Build docker image
+## Build docker image
 
 ~~~bash
 docker image build -t fritzbox .
 ~~~
 
-# docker-compose.yaml file
+## docker-compose.yaml file
 
 ~~~bash
 version: "3.5"

@@ -1,12 +1,12 @@
 ---
-date: 2023-01-15 13:50:19
+date: 2023-01-15
 title: Glossary for GIS
 image: ArcGIS.png
 description: Contains the most important word used in GIS world
-tags: 
-- ESRI
-- ArcMap
-- GIS
+tags:
+  - ESRI
+  - ArcMap
+  - GIS
 ---
 
 ## map

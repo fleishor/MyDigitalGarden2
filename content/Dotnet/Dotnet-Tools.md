@@ -12,8 +12,8 @@ tags:
 ---
 
 ## References
-- [.Net diagnostic tools](https://learn.microsoft.com/de-de/dotnet/core/diagnostics/tools-overview)
 
+- [.Net diagnostic tools](https://learn.microsoft.com/de-de/dotnet/core/diagnostics/tools-overview)
 
 ## Take a dump
 

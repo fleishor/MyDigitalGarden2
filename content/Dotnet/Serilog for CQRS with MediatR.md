@@ -1,4 +1,5 @@
 ---
+showOnIndexPage: true
 date: 2024-09-29
 title: Add Serilog to "CQRS with MediatR"
 image: 
@@ -9,12 +10,12 @@ tags:
 
 ## References
 
-[GitHub](https://github.com/fleishor/MyDevelopment/tree/master/DotNet/Mediatr)
-[HTTP logging in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-logging/?view=aspnetcore-8.0)
-[Compact Log Event Format (CLEF)](https://clef-json.org/)
-[Serilog](https://serilog.net/)
-[Serilog Enrichers](https://github.com/serilog/serilog/wiki/Enrichment)
-[Serilog ClientInfo Enricher](https://github.com/serilog-contrib/serilog-enrichers-clientinfo)
+- [GitHub](https://github.com/fleishor/MyDevelopment/tree/master/DotNet/Mediatr)
+- [HTTP logging in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-logging/?view=aspnetcore-8.0)
+- [Compact Log Event Format (CLEF)](https://clef-json.org/)
+- [Serilog](https://serilog.net/)
+- [Serilog Enrichers](https://github.com/serilog/serilog/wiki/Enrichment)
+- [Serilog ClientInfo Enricher](https://github.com/serilog-contrib/serilog-enrichers-clientinfo)
 
 ## Nuget packages
 
@@ -33,35 +34,34 @@ tags:
 ~~~csharp
 public static void Main(string[] args)
 {
-	var builder = WebApplication.CreateBuilder(args);
+   var builder = WebApplication.CreateBuilder(args);
 
-	// Add Serilog and use configuration from appsettings.json
-	builder.Host.UseSerilog((context, config) =>
-	{
-		config.ReadFrom.Configuration(context.Configuration);
-	});
+   // Add Serilog and use configuration from appsettings.json
+   builder.Host.UseSerilog((context, config) =>
+   {
+      config.ReadFrom.Configuration(context.Configuration);
+   });
 
-	// Required by ClientInfo enricher
-	builder.Services.AddHttpContextAccessor();
-	
-	...
-	
-	builder.Services.AddSwaggerGen(config =>
-	{
-		// Add CorrelationId to SwaggerUI
-		config.OperationFilter<AddHeaderParameters>();
-	});
+   // Required by ClientInfo enricher
+   builder.Services.AddHttpContextAccessor();
+   
+   ...
+   
+   builder.Services.AddSwaggerGen(config =>
+   {
+      // Add CorrelationId to SwaggerUI
+      config.OperationFilter<AddHeaderParameters>();
+   });
 
-	...
-	
-	// Log also ASP.Net request to Serilog
-	app.UseSerilogRequestLogging();
+   ...
+   
+   // Log also ASP.Net request to Serilog
+   app.UseSerilogRequestLogging();
 
-	...
+   ...
 
 }
 ~~~
-
 
 ## Configuration
 
@@ -115,12 +115,12 @@ Interesting is the Override, here we can set different levels for each logger.
 ~~~csharp
 public async Task<RoadWarningsQueryResult> GetRoadWarnings(string roadId, CancellationToken cancellationToken)
 {
-	using var loggerScope = logger.BeginScope("Get road warnings for highway {RoadId}", roadId);
+   using var loggerScope = logger.BeginScope("Get road warnings for highway {RoadId}", roadId);
 
-	var roadWarningsQuery = new RoadWarningsQuery(roadId.ToUpper(), SlidingExpirationInMinutes: 1);
-	var result = await mediator.Send(roadWarningsQuery, cancellationToken);
+   var roadWarningsQuery = new RoadWarningsQuery(roadId.ToUpper(), SlidingExpirationInMinutes: 1);
+   var result = await mediator.Send(roadWarningsQuery, cancellationToken);
 
-	return result;
+   return result;
 }
 ~~~
 
@@ -139,22 +139,22 @@ public static void Main(string[] args)
     ...
 
     // Add HttpLogging, but may cause performance issues
-	builder.Services.AddHttpLogging(options =>
-	{
-		options.LoggingFields = HttpLoggingFields.RequestPropertiesAndHeaders | HttpLoggingFields.ResponsePropertiesAndHeaders;
-		options.RequestHeaders.Add("x-correlation-id");
-		options.CombineLogs = false;
-	});
+   builder.Services.AddHttpLogging(options =>
+   {
+      options.LoggingFields = HttpLoggingFields.RequestPropertiesAndHeaders | HttpLoggingFields.ResponsePropertiesAndHeaders;
+      options.RequestHeaders.Add("x-correlation-id");
+      options.CombineLogs = false;
+   });
 
     ...
 
-	app.UseStaticFiles();
+   app.UseStaticFiles();
 
     ... 
 
-	// Log also HTTP to Serilog, static files are excluded because it called after UseStaticFiles()
-	// But may cause performance issues
-	app.UseHttpLogging();
+   // Log also HTTP to Serilog, static files are excluded because it called after UseStaticFiles()
+   // But may cause performance issues
+   app.UseHttpLogging();
 
     ...
 }
@@ -162,38 +162,37 @@ public static void Main(string[] args)
 
 ## HTTPClient logging
 
-
 ~~~csharp
 public static void Main(string[] args)
 {
-	
-	...
-	
-	// Add Serilog and use configuration from appsettings.json
-	builder.Host.UseSerilog((context, config) =>
-	{
-		config.ReadFrom.Configuration(context.Configuration)
-	
-			// necessary for Serilog.LogRequestResponse
-			.AddJsonDestructuringPolicies();
-	});
-	
-	...
-	
-	// Register the factory for the Autobahn client
-	builder.Services
-		.AddHttpClient<AutobahnClientFactory>(
-			(_, client) =>
-			{
-				client.DefaultRequestHeaders.Add("Accept", "application/json");
-			})
-	
-		// Attach the Kiota handlers to the http client, this is to enable all the Kiota features.
-		.AttachKiotaHandlers()
-		// HTTPClient logging
-		.LogRequestResponse();
-	
-	...
+   
+   ...
+   
+   // Add Serilog and use configuration from appsettings.json
+   builder.Host.UseSerilog((context, config) =>
+   {
+      config.ReadFrom.Configuration(context.Configuration)
+   
+         // necessary for Serilog.LogRequestResponse
+         .AddJsonDestructuringPolicies();
+   });
+   
+   ...
+   
+   // Register the factory for the Autobahn client
+   builder.Services
+      .AddHttpClient<AutobahnClientFactory>(
+         (_, client) =>
+         {
+            client.DefaultRequestHeaders.Add("Accept", "application/json");
+         })
+   
+      // Attach the Kiota handlers to the http client, this is to enable all the Kiota features.
+      .AttachKiotaHandlers()
+      // HTTPClient logging
+      .LogRequestResponse();
+   
+   ...
 
 }
 ~~~

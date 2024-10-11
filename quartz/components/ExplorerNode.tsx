@@ -181,7 +181,7 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
           </a>
         </li>
       ) : (
-        <li class="folder-container-listitem">
+        <li>
           {node.name !== "" && (
             // Node with entire folder
             // Render svg button + folder name, then children

@@ -1,4 +1,5 @@
 ---
+showOnIndexPage: true
 date: 2022-12-22 09:50:19
 title: PDFSharp
 image: PDFSharp.png

@@ -1,4 +1,5 @@
 ---
+showOnIndexPage: true
 date: 2024-09-24
 title: CQRS with MediatR
 image: MediatR.png
@@ -9,11 +10,12 @@ tags:
 
 ## References
 
-[GitHub](https://github.com/fleishor/MyDevelopment/tree/master/DotNet/Mediatr)
-[# CQRS Pattern With MediatR](https://www.milanjovanovic.tech/blog/cqrs-pattern-with-mediatr)
-[[Kiota OpenAPI Client Generator]]
+- [GitHub](https://github.com/fleishor/MyDevelopment/tree/master/DotNet/Mediatr)
+- [CQRS Pattern With MediatR](https://www.milanjovanovic.tech/blog/cqrs-pattern-with-mediatr)
+- [[Kiota OpenAPI Client Generator]]
 
 ## Project settings
+
 ### Directory.Build.props
 
 Global settings for all projects in subfolders
@@ -38,7 +40,7 @@ Global settings for all projects in subfolders
 
 ### Directory.Build.targets
 
-Nuget packages which are referenced in projects in subfolders 
+Nuget packages which are referenced in projects in subfolders
 
 <!-- https://raw.githubusercontent.com/fleishor/MyDevelopment/refs/heads/master/DotNet/Mediatr/Directory.Build.targets -->
 ~~~xml
@@ -113,23 +115,24 @@ builder.Services.AddKiotaHandlers();
 
 // Register the factory for the Autobahn client
 builder.Services
-	.AddHttpClient<AutobahnClientFactory>(
-		(_, client) =>
-		{
-			client.DefaultRequestHeaders.Add("Accept", "application/json");
-		})
+   .AddHttpClient<AutobahnClientFactory>(
+      (_, client) =>
+      {
+         client.DefaultRequestHeaders.Add("Accept", "application/json");
+      })
 
-	// Attach the Kiota handlers to the http client, this is to enable all the Kiota features.
-	.AttachKiotaHandlers();
+   // Attach the Kiota handlers to the http client, this is to enable all the Kiota features.
+   .AttachKiotaHandlers();
 
 // Register the Autobahn client
 builder.Services.AddTransient(sp => sp.GetRequiredService<AutobahnClientFactory>().GetClient());
 ...
 ~~~
 
-## Register MediatR handler and behaviors in DI 
+## Register MediatR handler and behaviors in DI
 
 The registration order of the behaviors is also the execution order, which means:
+
 1. LoggingBehavior
 2. ValidationBehavior
 3. QueryCachingBehavior
@@ -138,12 +141,12 @@ The registration order of the behaviors is also the execution order, which means
 ...
 builder.Services.AddMediatR(cfg =>
 {
-	cfg.RegisterServicesFromAssembly(typeof(RoadWarningsQueryHandler).Assembly);
+   cfg.RegisterServicesFromAssembly(typeof(RoadWarningsQueryHandler).Assembly);
 
-	// Order of AddOpenBehavior() is important
-	cfg.AddOpenBehavior(typeof(QueryLoggingBehavior<,>));
-	cfg.AddOpenBehavior(typeof(QueryValidationBehavior<,>));
-	cfg.AddOpenBehavior(typeof(QueryCachingBehavior<,>));
+   // Order of AddOpenBehavior() is important
+   cfg.AddOpenBehavior(typeof(QueryLoggingBehavior<,>));
+   cfg.AddOpenBehavior(typeof(QueryValidationBehavior<,>));
+   cfg.AddOpenBehavior(typeof(QueryCachingBehavior<,>));
 });
 ...        
 ~~~
@@ -257,7 +260,7 @@ public class QueryLoggingBehavior<TQuery, TQueryResult> : IPipelineBehavior<TQue
 
 ## QueryValidationBehavior
 
-- The query parameter are validated if there is a corresponding Validator in DI container. 
+- The query parameter are validated if there is a corresponding Validator in DI container.
 - There is also a nuget package: [MediatR.Extensions.FluentValidation.AspNetCore](https://www.nuget.org/packages/MediatR.Extensions.FluentValidation.AspNetCore)
 
 <!-- https://raw.githubusercontent.com/fleishor/MyDevelopment/refs/heads/master/DotNet/Mediatr/Road.BusinessLayer/Behaviors/Query/QueryValidationBehavior.cs -->
@@ -313,6 +316,7 @@ public class RoadWarningsQueryValidator : AbstractValidator<RoadWarningsQuery>
     }
 }
 ~~~
+
 ## Program.cs
 
 <!-- https://raw.githubusercontent.com/fleishor/MyDevelopment/refs/heads/master/DotNet/Mediatr/Road.API/Program.cs -->
@@ -385,4 +389,3 @@ public static class Program
     }
 }
 ~~~
- 
