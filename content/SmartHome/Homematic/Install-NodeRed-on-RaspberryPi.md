@@ -1,5 +1,5 @@
 ---
-date: 2022-01-11 19:03:05
+date: 2022-01-11
 title: Install NodeRed on RaspberryPi (homematic.fritz.box)
 image: NodeRed.png
 description: Installation steps for NodeRed on RaspberryPi without Docker

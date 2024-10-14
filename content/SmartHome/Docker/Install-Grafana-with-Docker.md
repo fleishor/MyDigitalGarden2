@@ -1,5 +1,5 @@
 ---
-date: 2021-12-28 14:54:05
+date: 2021-12-28
 title: Installation Grafana with Docker
 description: Installation steps for Grafana with Docker
 tags: 

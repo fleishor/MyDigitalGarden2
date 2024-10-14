@@ -1,5 +1,5 @@
 ---
-date: 2021-12-29 08:55:18
+date: 2021-12-29
 title: Installation Promtail with Docker
 description: Installation steps for Promtail with Docker
 tags: 

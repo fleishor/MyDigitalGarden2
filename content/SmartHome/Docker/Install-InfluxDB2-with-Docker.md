@@ -1,5 +1,5 @@
 ---
-date: 2021-12-28 13:46:22
+date: 2021-12-28
 title: Installation InfluxDB 2.x with Docker
 description: Installation steps for InfluxDB 2.x with Docker
 tags: 

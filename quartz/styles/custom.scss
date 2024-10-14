@@ -2,5 +2,50 @@
 
 // put your custom CSS here!
 .note {
-  background-color: red;
+  display: flex;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  color: var(--dark);
+  padding-bottom: 1rem;
+
+  & a {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  & .image {
+    width: 30%;
+    padding-right: 1rem;
+    margin: auto;
+
+    & img {
+      max-height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  & .text {
+    width: 70%;
+    padding-left: 1rem;
+
+    & .date {
+      padding-bottom: 0.5rem;
+      text-align: right;
+      font-size: 0.8rem;
+    }
+
+    & .title {
+      font-family: var(--headerFont);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    & .description {
+      font-family: var(--bodyFont);
+    }
+  }
 }

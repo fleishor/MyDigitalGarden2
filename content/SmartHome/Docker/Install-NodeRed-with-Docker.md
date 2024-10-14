@@ -1,5 +1,5 @@
 ---
-date: 2021-12-28 21:00:11
+date: 2021-12-28
 title: Installation NodeRed with Docker
 description: Installation steps for NodeRed with Docker
 tags: 

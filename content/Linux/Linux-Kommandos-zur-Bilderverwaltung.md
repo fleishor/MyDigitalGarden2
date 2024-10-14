@@ -1,5 +1,5 @@
 ---
-date: 2023-01-01 10:54:05
+date: 2023-01-01
 title: Linux Kommandos zur Bilderverwaltung
 image: LinuxCommandLine.png
 description: Linux Kommandos um identische Bilder zu finden/löschen und Bilder nach Datum in Unterverzeichnisse einsortieren

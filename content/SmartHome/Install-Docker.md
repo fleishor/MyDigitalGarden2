@@ -1,5 +1,5 @@
 ---
-date: 2021-12-28 11:50:19
+date: 2021-12-28
 title: Installation Docker
 image: Docker.png
 description: Installation steps for Docker on Raspberry Pi 4

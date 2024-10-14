@@ -1,5 +1,5 @@
 ---
-date: 2021-12-28 14:32:45
+date: 2021-12-28
 title: Installation Telegraf with Docker
 description: Installation steps for Telegraf with Docker
 tags: 

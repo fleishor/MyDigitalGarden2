@@ -2,7 +2,7 @@
 showOnIndexPage: true
 date: 2024-09-29
 title: Add Serilog to "CQRS with MediatR"
-image: 
+image: Serilog.png
 description: Add Serilog to "CQRS with MediatR" project; the logs are written as plain text to console and as ([Compact Log Event Format (CLEF)](https://clef-json.org/)) to a file. Additionally we can set a correlation id in the http header.
 tags:
   - Dotnet

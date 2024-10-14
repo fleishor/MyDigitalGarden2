@@ -1,5 +1,5 @@
 ---
-date: 2023-03-16T16:02
+date: 2023-03-16
 title: Backup HDD to image file and mount the image file
 image: LinuxCommandLine.png
 description: Backup hard disc with dd to image file and mount the image file

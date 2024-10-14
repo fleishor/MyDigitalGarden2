@@ -1,5 +1,5 @@
 ---
-date: 2021-12-28 21:05:18
+date: 2021-12-28
 title: Installation Loki with Docker
 description: Installation steps for Loki with Docker
 tags: 

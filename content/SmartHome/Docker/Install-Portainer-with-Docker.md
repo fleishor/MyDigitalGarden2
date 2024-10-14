@@ -1,5 +1,5 @@
 ---
-date: 2021-12-28 11:56:25
+date: 2021-12-28
 title: Installation of Portainer
 description: Installation steps for Portainer
 tags: 

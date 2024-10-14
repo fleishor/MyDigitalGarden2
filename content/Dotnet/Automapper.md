@@ -1,5 +1,4 @@
 ---
-showOnIndexPage: true
 date: 2024-09-24
 title: Automapper and why not to use it
 image: 

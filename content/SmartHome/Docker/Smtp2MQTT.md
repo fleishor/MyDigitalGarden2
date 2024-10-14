@@ -1,5 +1,5 @@
 ---
-date: 2023-03-04 17:55:00
+date: 2023-03-04
 title: Smtp2MQTT
 description: Save Mail in Filesystem and forward notification with HTTP reference via MQTT
 tags:

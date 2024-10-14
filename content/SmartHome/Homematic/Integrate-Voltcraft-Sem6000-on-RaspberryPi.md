@@ -1,5 +1,5 @@
 ---
-date: 2022-01-30 13:50:19
+date: 2022-01-30
 title: Integrate Voltcraft SEM6000 (homematic.fritz.box)
 image: Sem6000.png
 description: Integrate Voltcraft SEM6000 

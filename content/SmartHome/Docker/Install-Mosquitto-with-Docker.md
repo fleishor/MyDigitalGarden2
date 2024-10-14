@@ -1,5 +1,5 @@
 ---
-date: 2022-12-28 14:54:05
+date: 2022-12-28
 title: Installation Mosquitto with Docker
 description: Installation steps for Mosquitto with Docker
 tags: 

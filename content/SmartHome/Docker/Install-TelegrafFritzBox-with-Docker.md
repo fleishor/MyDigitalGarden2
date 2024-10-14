@@ -1,5 +1,5 @@
 ---
-date: 2021-12-28 20:26:45
+date: 2021-12-28
 title: Installation Telegraf-FritzBox with Docker
 description: Create a Docker image which fetch statistics from FritzBox and send them to Telegraf
 tags: 
