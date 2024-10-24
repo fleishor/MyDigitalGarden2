@@ -1,4 +1,5 @@
 ---
+draft: true
 showOnIndexPage: true
 date: 2024-10-14
 title: Cookie based Authentication
@@ -10,7 +11,7 @@ tags:
 
 ## References
 
-- [Github](https://github.com/fleishor/MyDevelopment/tree/master/DotNet/Authentication/CookieBased)
+- [Github](https://github.com/fleishor/MyDevelopment/tree/master/DotNet/Authentication/Cookiebased)
 
 ## Add authentication and authorization to program.cs
 
